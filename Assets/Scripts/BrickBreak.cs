@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BrickBreak : MonoBehaviour
 {
-    public int scoreValue = 10; // Score value of the brick
+    public int scoreValue = 1; // Score value of the brick
 
     void OnCollisionEnter2D(Collision2D collision)
     {
