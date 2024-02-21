@@ -7,6 +7,7 @@ TagManager:
   - Paddle
   - BottomBoundary
   - ScreenBoundary
+  - Ball
   layers:
   - Default
   - TransparentFX

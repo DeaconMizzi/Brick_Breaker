@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BrickSpawner : MonoBehaviour
 {
-    public GameObject brickPrefab;
+    public GameObject[] brickPrefabs; // Array of brick prefabs with different properties
     public int rows = 5;
     public int columns = 5;
     public float brickWidth = 1f;
@@ -24,6 +24,9 @@ public class BrickSpawner : MonoBehaviour
         {
             for (int col = 0; col < columns; col++)
             {
+                int brickIndex = Random.Range(0, brickPrefabs.Length); // Randomly select a brick prefab
+                GameObject brickPrefab = brickPrefabs[brickIndex];
+
                 Vector2 spawnPosition = CalculateSpawnPosition(row, col);
                 Instantiate(brickPrefab, spawnPosition, Quaternion.identity);
             }
